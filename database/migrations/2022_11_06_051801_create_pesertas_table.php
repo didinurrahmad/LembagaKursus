@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('pesertas', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('idPeserta')->unique();
+            $table->string('idPeserta');
             $table->string('alamat');
             $table->string('noHp');
-            $table->foreignId('kelas_id')->references('id')->on('kelas');
+            // $table->foreignId('kelas_id')->references('id')->on('kelas');
             $table->timestamps();
             // $table->foreign('kelas_id');
         });
